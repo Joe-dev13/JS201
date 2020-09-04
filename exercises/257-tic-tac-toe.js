@@ -23,3 +23,65 @@
 //   [null, 'X', 'X']
 //   ])
 // null
+
+function rowColomn() {
+    var cell = Math.floor(Math.random() * 3);
+    return cell;
+}
+
+
+function player1(ticTacToeBoard) {
+    var row =  rowColomn();
+    var colomn = rowColomn();
+    playerOneChoice = 'x'
+    ticTacToeBoard[row][colomn] = playerOneChoice;
+    // console.log(ticTacToeBoard)
+}
+
+function player2(ticTacToeBoard) {
+    var row =  rowColomn();
+    var colomn = rowColomn(); 
+    playerTwoChoice = 'o'
+    ticTacToeBoard[row][colomn] = playerTwoChoice;
+    // console.log(ticTacToeBoard)
+}
+
+
+
+function ticTacToe(){
+    var ticTacToeBoard = [
+        ['','',''],
+        ['','',''],
+        ['','','']
+    ] 
+    player1(ticTacToeBoard);
+    player2(ticTacToeBoard);
+    if ( playerOneChoice === playerTwoChoice ){
+        // console.log('Cell taken!', playerOneChoice, playerTwoChoice)
+    }
+    console.log(ticTacToeBoard);
+}
+// ticTacToe();
+
+function checkBoard() {
+    var ticTacToeBoard = [
+        ['','',''],
+        ['','',''],
+        ['','','']
+    ] 
+    for ( i = 0; i < ticTacToeBoard.length; i++ ) {
+        for ( j = 0; j < ticTacToeBoard[i].length; j++ ){
+            if ( j % 2 === 0 ){
+                player1(ticTacToeBoard);
+            }else{
+                player2(ticTacToeBoard);   
+            }
+            // if (playerTwoChoice[j] == playerOneChoice[j]) {
+            //     return 'i'
+            // }
+        }
+    }
+    console.log(ticTacToeBoard);
+}
+checkBoard();
+

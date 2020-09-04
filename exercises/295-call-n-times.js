@@ -21,3 +21,10 @@
 //
 // In this example we assume there is a function "hello" already defined and
 // that it prints "Hello, world!" to the console.
+
+function callNTimes(n,fun) {
+    for (let i = 0; i < n; i++){
+        fun();
+    }
+  }
+callNTimes(7,fun);

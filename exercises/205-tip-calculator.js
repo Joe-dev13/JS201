@@ -10,6 +10,18 @@
 // tipAmount(100, 'good') --> 20
 // tipAmount(40, 'fair') --> 6
 
+function tipAmount(amount, service) { 
+    if (service == "good") { 
+     return amount * 0.2; } 
+       else if (service == "fair") {
+         return amount * 0.15;  } 
+     else if (service == "bad") {
+         return amount * 0.1;  }
+      else {    
+        return "Invalid service rating given";  }
+    }
+console.log(tipAmount());
+
 
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

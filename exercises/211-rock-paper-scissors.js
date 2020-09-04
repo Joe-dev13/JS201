@@ -6,3 +6,25 @@
 // rockPaperScissors('rock', 'scissors') --> 'player 1'
 // rockPaperScissors('rock', 'paper') --> 'player 2'
 // rockPaperScissors('paper', 'paper') --> 'draw'
+
+const rockPaperScissors = () => {
+    if (player1 === "paper") {
+        if (player2 === "rock") {
+            return "player 1 wins";
+        } else {
+            if (player2 === "scissors") {
+                return "player 2 wins";
+            }
+        }
+        if (player1 === "scissors") {
+            if (player2 === "rock") {
+                return "player 2 wins";
+            } else {
+                if (player2 === "paper") {
+                    return "player 1 wins";
+                }
+            }
+        }
+    }
+}
+rockPaperScissors();

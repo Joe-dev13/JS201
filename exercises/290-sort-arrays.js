@@ -38,3 +38,13 @@
 //   [4, 5]
 // ])
 // > [[2], [4, 5], [9, 1, 9]]
+
+var arr = [
+    [1, 3, 4],
+    [2, 4, 6, 8],
+    [3, 6]
+  ];
+
+//   arr.sort((a,b) => a.reduce((a,b) => a + b) - b.reduce((a,b) => a + b));
+  let final = arr.sort((a,b) => a.reduce((a,b) => a + b) - b.reduce((a,b) => a + b));
+  console.log(final);
